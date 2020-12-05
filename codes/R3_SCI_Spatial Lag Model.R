@@ -15,10 +15,6 @@ dir.sci_dat_county <- "county_county_aug2020.tsv"
 sci_dat <- read_tsv(dir.sci_dat_county)
 sci_dat <- rename(sci_dat, sci=scaled_sci)
 
-# Read CSV Votes and FIPS
-# FIPS <- read.csv("/Users/Xuan/Desktop/CSSS 567_NETWORK/20201124_allcounty_votes.csv",
-#stringsAsFactors = FALSE)
-
 # Get the maps from the tigris package
 counties_map <- counties(cb = TRUE) %>% 
   st_as_sf() %>% 
