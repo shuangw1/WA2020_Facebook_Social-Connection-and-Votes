@@ -5,7 +5,7 @@ library(rgdal)
 library(ggplot2)
 
 # read shapefile
-washington = readOGR(dsn = "~/WA_County_Boundaries-shp", layer = "WA_County_Boundaries")
+washington = readOGR(dsn = "~/WA_County_Boundaries-shp", layer = "WA_County_Boundaries") #the shp file is too large, I will share using google drive
 
 # read csv
 df <- read.csv("~/20201124_allcounty_votes.csv",

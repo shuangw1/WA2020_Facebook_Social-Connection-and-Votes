@@ -9,7 +9,7 @@ library(raster)
 library(ggplot2)
 
 ### FILL THIS LINE BEFORE RUNNING
-dir.sci_dat_county <- "county_county_aug2020.tsv"
+dir.sci_dat_county <- "county_county_aug2020.tsv" # the file is too large, I will share using google drive
 
 # Read in the county-county SCI data
 sci_dat <- read_tsv(dir.sci_dat_county)
