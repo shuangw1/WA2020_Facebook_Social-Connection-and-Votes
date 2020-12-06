@@ -1,9 +1,11 @@
 ## From online to offline - Bridging Facebook Social Connectedness Index (SCI) and 2020 Election Votes 
 
 This is the final project for STAT/CSSS 567 Social Network Analysis at University of Washington
+
 Authors: Zhaowen Guo, Tao Lin, Shuang Wu (alphabetically)
 
 📰 Introduction
+
 The 2020 election has come to an end. Washington is considered a "Blue" state, but counties in WA voted differently, and it is geographically very different between the eastern and western parts of the state. The west parts around the Seattle area tend to vote more for Democrats, whereas eastern Washington tends to vote for more Republicans.
 
 In this project, we are trying to find out the relationship between IV `Facebook Social Connectedness Index` and DV `votes` in Washington State, to see if strong online connections between county i and county j (King county in Seattle area in this case) will influence voters' decisions. 
@@ -12,6 +14,7 @@ We are also interested to see the difference between an online world with a real
 
 
 🔎 Data Resources
+
 [Facebook SCI "county_county_Aug2020.tsv"] <https://data.humdata.org/dataset/social-connectedness-index>
 [Washington State shapefile] <https://data-wadnr.opendata.arcgis.com/datasets/12712f465fc44fb58328c6e0255ca27e_11>
 [Washington State Votes] <https://results.vote.wa.gov/results/20201103/turnout.html>
