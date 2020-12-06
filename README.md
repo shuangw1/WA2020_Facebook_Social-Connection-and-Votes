@@ -11,4 +11,4 @@ https://data.humdata.org/dataset/social-connectedness-index
 
 
 
-References: 
+References: https://github.com/social-connectedness-index/example-scripts
