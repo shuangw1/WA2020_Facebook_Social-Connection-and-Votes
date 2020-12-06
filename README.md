@@ -41,7 +41,7 @@ Boom, this explains a lot! Washington State University has many connections with
 - Build a latent space model using `ergmm` in R, compare the locations of those counties in a real-world locations with those in latent space. Results show that counties in latent space mimic their real-world locations - counties that are far away in a latent space are also far from each other in the real world, and vice versa. 
 
 🎏 Acknowledgment
-[References]: (https://github.com/social-connectedness-index/example-scripts)
+References: (https://github.com/social-connectedness-index/example-scripts)
 
 
 
