@@ -25,6 +25,8 @@ We are also interested to see the difference between an online world with a real
 
 We first mapped out the votes result in WA using the R `sp` package, generally speaking, eastern Washington votes much more Republican than western Washington. We found out that there is an outlier, `Whitman County` stands out as more blue in a bigger sea of red east of the Cascades. 
 
+![R or B](/plots/R or B.PNG)
+
 We first look at `median household income` as a variable because we are guessing the economic level will reflect voters' behaviors somehow, but it turns out that Whitman is not one of the "rich" counties. So why does it vote for Democrats?
 
 The next step is looking at the Facebook `Social Connectedness Index` and map it. Surprisingly, Whitman county actually has a very high SCI with King county, the Seattle area.
@@ -39,7 +41,7 @@ Boom, this explains a lot! Washington State University has many connections with
 - Build a latent space model using `ergmm` in R, compare the locations of those counties in a real-world locations with those in latent space. Results show that counties in latent space mimic their real-world locations - counties that are far away in a latent space are also far from each other in the real world, and vice versa. 
 
 🎏 Acknowledgment
-References: <https://github.com/social-connectedness-index/example-scripts>
+[References]: (https://github.com/social-connectedness-index/example-scripts)
 
 
 
