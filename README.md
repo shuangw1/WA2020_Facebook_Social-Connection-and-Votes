@@ -4,6 +4,7 @@ This is the final project for STAT/CSSS 567 Social Network Analysis at Universit
 Authors: Zhaowen Guo, Tao Lin, Shuang Wu (alphabetically)
 
 📰 Introduction
+
 The 2020 election has come to an end. The state of Washington is considered as a "Blue" state, but counties in WA voted differently, and it is geographically very different between eastern and western part of the state. The west parts around Seattle area tend to vote more for Democrats whereas eastern Washington tends to vote for more Republicans.
 
 In this project, we are trying to find out the relationship between IV `Facebook Social Connectedness Index` and DV `votes` in Washington State, to see if strong online connections between county i and county j (King county in Seattle area in this case) will influence voters' decisions. 
@@ -12,6 +13,7 @@ We are also interested to see the difference between an online  world, with a re
 
 
 🔎 Data Resources
+
 Facebook SCI "county_county_Aug2020.tsv" [https://data.humdata.org/dataset/social-connectedness-index]
 Washington State shapefile [https://data-wadnr.opendata.arcgis.com/datasets/12712f465fc44fb58328c6e0255ca27e_11]
 Washington State Votes [https://results.vote.wa.gov/results/20201103/turnout.html]
