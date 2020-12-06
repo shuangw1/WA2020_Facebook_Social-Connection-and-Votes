@@ -1,6 +1,7 @@
 ## From online to offline - Bridging Facebook Social Connectedness Index (SCI) and 2020 Election Votes 
 
 This is the final project for STAT/CSSS 567 Social Network Analysis at University of Washington
+
 Authors: Zhaowen Guo, Tao Lin, Shuang Wu (alphabetically)
 
 📰 Introduction
