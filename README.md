@@ -16,7 +16,9 @@ We are also interested to see the difference between an online world with a real
 🔎 Data Resources
 
 [Facebook SCI "county_county_Aug2020.tsv"] <https://data.humdata.org/dataset/social-connectedness-index>
+
 [Washington State shapefile] <https://data-wadnr.opendata.arcgis.com/datasets/12712f465fc44fb58328c6e0255ca27e_11>
+
 [Washington State Votes] <https://results.vote.wa.gov/results/20201103/turnout.html>
 
 🔨 Process
