@@ -8,7 +8,7 @@ Authors: Zhaowen Guo, Tao Lin, Shuang Wu (alphabetically)
 
 The 2020 election has come to an end. Washington is considered a "Blue" state, but counties in WA voted differently, and it is geographically very different between the eastern and western parts of the state. The west parts around the Seattle area tend to vote more for Democrats, whereas eastern Washington tends to vote for more Republicans.
 
-In this project, we are trying to find out the relationship between IV `Facebook Social Connectedness Index` and DV `votes` in Washington State, to see if strong online connections between county i and county j (King county in Seattle area in this case) will influence voters' decisions. 
+In this project, we are trying to find out the relationship between IV `Facebook Social Connectedness Index` and DV `votes` in Washington State, to see if strong online connections between county i (King county in Seattle area in this case) and county j (other counties in this case) will influence voters' decisions. 
 
 We are also interested to see the difference between an online world with a real physical world. Are they similar or different? Do nearby counties tend to vote for the same party or not? Therefore we construct a `latent space model` for counties in WA and compare it with their real-world locations.
 
