@@ -1,0 +1,84 @@
+---
+title: "CSSS567"
+author: "Zhaowen Guo"
+date: ""
+output: pdf_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+# map vote share data to WA counties
+votes <- read.csv("county_votes.csv", stringsAsFactors = F, header = T)
+wa <- read.csv("nodes.csv", stringsAsFactors = F, header = T)
+colnames(wa) <- c("county_fips", "county")
+wa_dem <- left_join(wa, votes[,c("county_fips","per_point_diff")], by = "county_fips")
+wa_dem$per_point_diff <- wa_dem$per_point_diff * (-1) # switch to per_dem - per_gop
+```
+
+```{r}
+# create county pairs with each pair containing King County (53033)
+wa_pair <- wa_dem %>%
+    mutate(diff = round((0.53064936 - per_point_diff), 2)) %>%
+    filter(county != "King") %>%
+    select(-per_point_diff)
+```
+
+```{r}
+# merge sci data
+sci <- read.csv("sci_fips_merged.csv", stringsAsFactors = F, header = T)
+sci_pair <- left_join(wa_pair, sci[,c("county","sci")])
+```
+
+```{r}
+# add covariates 
+demographics <- read.csv("demographics.csv", stringsAsFactors = F, header = T)
+demographics_pair <- demographics %>%
+    mutate(diff_age = abs(age - 36.19),
+           diff_hispanic = abs(hispanic - 22.99),
+           diff_income = abs(income - 92693.33),
+           diff_pop = 1068.65 - population) %>%
+    filter(county_fips != 53033)
+```
+
+```{r}
+sci_demographics_pair <- left_join(sci_pair, demographics_pair) %>%
+    select(-c("age","hispanic","income","population"))
+```
+
+Using the following equation to fit the regression model: \newline
+$Difference_{dem-gop}$ = $\beta_0$ + $\beta_1log(SCI_{ij})$ + $X_{ij}$ + $\epsilon_{ij}$
+
+```{r}
+sci_model <- glm(diff ~ log(sci) + diff_age + diff_hispanic + log(diff_income) + log(diff_pop), data = sci_demographics_pair)
+```
+
+```{r}
+summary(sci_model)
+```
+```{r}
+# visualize the effects 
+conf <- confint.lm(sci_model)[-1,]
+effect_data <- data.frame()
+effects <- as.data.frame(sci_model$coefficients[-1])
+effect_data <- cbind(effects, conf)
+colnames(effect_data) <- c("size","lower","upper")
+effect_data$index <- c("SCI","Age","Hispanic","Income","Population")
+```
+
+```{r}
+library(ggplot2)
+ggplot(data=effect_data, aes(y=index, x=size, xmin=lower, xmax=upper)) +
+    geom_point(size=2) + 
+    geom_errorbarh(height=.1) + 
+    geom_vline(xintercept=0, color="black", linetype="dashed", alpha=.5) +
+    theme_minimal() +
+    labs(x = "Effect Size", y = "")
+```
+```{r}
+
+```
+
