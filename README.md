@@ -39,7 +39,7 @@ Boom, this explains a lot! Washington State University has many connections with
 💡 Analysis
 - Build a linear regression model: IV `Facebook Social Connectedness Index` and DV `votes` in Washington State. The result shows a strong positive correlation between the two. The higher a county is connected with King county, the higher percentage of votes for Democrats. 
 - Build a latent space model using `ergmm` in R, compare the locations of those counties in a real-world locations with those in latent space. Results show that counties in latent space mimic their real-world locations - counties that are far away in a latent space are also far from each other in the real world, and vice versa. 
-- A spatial regression model. Using Global Moran's I, it is showing that the SCI has spatial autocorrelation, which means neighboring counties have an effect on the input vairable. Next step is to use a spatial lag model or a spatial error model.
+- A spatial autocorrelation testing. Using Global Moran's I, it is showing that the SCI has spatial autocorrelation, which means neighboring counties have an effect on the input vairable. Next step is to use a spatial lag model or a spatial error model.
 
 🎏 Acknowledgment
 References: (https://github.com/social-connectedness-index/example-scripts)
